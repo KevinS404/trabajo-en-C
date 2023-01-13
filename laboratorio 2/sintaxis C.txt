@@ -1,0 +1,116 @@
+-------------------------------------------------------------------------------------------VARIABLES
+int x=10, y=100; // se declaro una variable de tipo entero
+float z=3.14159; // .... flotante
+char * str = "HOOOOLLLLLAAAAA";
+char car = '%'; // tipo caracter  (solo uno)
+x= x+1;  // al valor contenido en x se le asigno el valor de la operacion x+1
+
+--------------------------------------------------------------------------------------------- TIPO DE DATOS
+printf(<FORMATO>, a,b,c,d, ....)
+FORMATO: string que contiene %d %f %s ...
+por cada %algo se reeemplaza en orden la aparicion de las variables a,b,c,...
+%i o %d : tipo entero
+%f : tipo flotante
+%s : tipo char * que significa string
+%c : tipo char
+%p : puntero de memoria
+printf(" El valor de x= %d y= %d z= %f str= %s car=%c y fin \n", x,y,z,str,car);
+// Toda linea termina en punto y coma
+
+-----------------------------------------------------------------------------------------ASIGNACION CONDICIONAL
+int c = (a>b)?20:30; //si se cumple, c = 20, sino, c= 30
+
+-------------------------------------------------------------------------------------------OPERADORES LOGICOS
+Existen varios operadores logicos
+x>y : x es mayor que y
+x<y : x es menor que y
+x==y : x es igual que y
+x>=y : x es mayor o igual que y
+x>=y : x es menor o igual que y
+
+------------------------------------------------------------------------------------------IF,ELSE,ELSE IF
+if(condicion){
+   bloque ejecucion
+}
+  
+------------------------------------------------------------------------------------------SWITCH
+switch(parametro){->(solo enteros o char)
+     case 1:(hacer algo);break; -> analiza si es 1
+     case n:(hacer algo);break; -> analiza si es n
+     defualt: -> en caso de que no se cumpla ninguno de los otros cases
+}
+----------------------------------------------------------------------------------------WHILE
+while(condicion){ 
+     se ejecuta minimo 0 veces;
+     incremento o decremento;
+}
+-----------------------------------------------------------------------------------------FOR
+for(inicializacion;comparacion; incremento o decremento){ 
+           se ejecuta 0 veces minimo;
+}
+----------------------------------------------------------------------------------------DO WHILE
+do{ //se ejecuta una vez minimo
+
+}while(condicion)
+
+-------------------------------------------------------------------------------FUNCIONES
+int suma(int a, int b){
+    int c = a+b;
+    return c;
+}
+-------------------------------------------------------------------------------#DEFINE
+#define PI 3.1416
+//ahora PI = 3.1416
+-
+--------------------------------------------------------------------------------SCANF(INPUT)
+scanf("%cualquiera",&nombreVariable)
+fgets(vector,tamaño,stdin)
+fflush(stdin) //limpiar
+
+
+-------------------------------------------------------------------------------PUNTERO
+//puntero(*): variable que guarda una direccion de memoria
+//variable: tipo,dato,direccion,nombre
+//los vectores y matrices al ser definidos son solo direccion de memoria
+int a = 9;
+int *p=&a;      // guardo la direccion de memoria de a en el puntero p, lo q hace que *p = 9
+*p = 7          // cambiar el valor almacenado en a
+int *q;
+q = (int *)malloc( sizeof(int)*3 ); // a "q" le reservamos memoria de cierto tamaño,pudiendo multiplicarla
+*(q+0) = 3;     //asigno el valor 3 en la posicion 0
+*(q+1) = 7;     //asigno el valor 7 en la posicion 1
+*q[2] = 8;      //asigno el valor 8 en la posicion 2
+*q = 99;        //le asigno 99
+free(q);        //libera el espacio de memoria
+-----------------------------------------------------------------------------ESTRUCTURA
+typedef persona{ //creo la estructura con las diferentes variables que requiera
+    int edad;
+    int sexo;
+    int nombre[21];
+    int *puntero;
+}nombreTipoNuevo; // aqui se le pone nombre al nuevo tipo q creamos
+
+int main(){
+   nombreTipoNuevo nombre; //ahora se le puede asignar un nombre para acceder a la estructura
+
+
+//BEE en profundidad
+procedure Búsqueda_en_profundidad {
+	open  [estado_inicial]
+	closed  {}
+	while (open no está vacía) {
+	 remover el primer estado X de la lista open
+	 if (X es un estado objetivo) return éxito
+	  else {
+	     generar el conjunto de sucesores del estado X
+	     agregar el estado X al conjunto closed
+	     eliminar sucesores que ya están en open o en closed
+	     agregar el resto de los sucesores al principio de open
+	    }
+	  }
+	  return fracaso
+	}
+
+------------------------------------------- archivos
+FILE * archivo;
+archivo = fopen("Entrada.in","r");

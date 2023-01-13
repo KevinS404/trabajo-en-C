@@ -1,1 +1,1 @@
-# trabajo-en-C
+Repositorio que tiene un compilado de trabajos hechos por mi en el lenguaje C
